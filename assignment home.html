@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SQL Compiler</title>
+	<style type="text/css">
+		#output_table
+		{
+			padding: 10px;
+		}
+		#input
+		{
+			width: 40%;
+		}
+		#output
+		{
+			width: 50%;
+		}
+		
+		#btn {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 6px 4px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+#btn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+		.col {
+		  float: left;
+		  padding: 10px;
+	}
+		/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+	</style>
+	<script type="text/javascript">
+		function run()
+		{
+			var y=document.getElementById("txt");
+			if (y.length==0)
+				alert("Please write a query  to run");
+			else
+			{
+			var x = document.getElementById("output_table");
+			  if (x.style.display === "none")
+			    x.style.display = "block";
+		}
+		}
+	</script>
+</head>
+<body style="background-color: #D9AFD9;
+background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%); background-repeat: no-repeat;
+">
+	<h1 style="text-decoration-color: black; font-size: 50px; font-weight: bolder; text-align: center; color: darkgreen; text-shadow: 2px 1px gray; font-family: ;">SQL QUERY COMPILER</h1>
+	<br>
+	<div class="row">
+		<div class ="col"id="input" style="display: inline;"><textarea id="txt" placeholder="#Please write your query" style="margin-left: 50px; margin-top: 50px; width: 100%; height: 300px; font-size: 20px;"type="text" name="query"></textarea>
+		</div>
+		<div class ="col" id="output" style="">
+			<table id="output_table" cellpadding="10px" cellspacing="5px" style="margin-top: 50px; margin-left: 300px; margin-bottom: 100px; width: 100%; font-size: 20px; display: none;">
+			<tr style="border: 0.5px;">
+				<th>Roll No.</th>
+				<th>Name</th>
+				<th>Course</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Simran Arora</td>
+				<td>B.Tech</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Sidharth Jain</td>
+				<td>B.Com</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Shubham Bansal</td>
+				<td>LLB</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Shubham Garg</td>
+				<td>MBA</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>Simran Dhiman</td>
+				<td>BBA</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>Tisha Jindal</td>
+				<td>M.Tech</td>
+			</tr>
+		</table>
+		</div>
+	</div>
+	<button style="margin-left: 50%;" id="btn" onclick="run()">Run query</button>
+</body>
+</html>
